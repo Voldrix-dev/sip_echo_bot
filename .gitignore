@@ -1,5 +1,5 @@
-# Python
-__pycache__/
+# Baresip-python (cloned by build script)
+baresip-python/
 *.pyc
 *.pyo
 *.pyd
