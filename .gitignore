@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+
+# Virtual environments
+linenv/
+.venv/
+venv/
+env/
+
+# Baresip native build
+baresip-python/.native/
+baresip-python/third_party/baresip/build/
+baresip-python/third_party/re/build/
+baresip-python/build/
+baresip-python/src/baresip/_native*.so
+baresip-python/src/baresip/_native.c
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Desktop files (generated)
+*.desktop
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,7 @@
+cffi
+numpy
+packaging
+typing-extensions
+PySide6
+QtAwesome
+evdev

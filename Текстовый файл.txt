@@ -1,0 +1,341 @@
+[GUI] Start requested
+[GUI] Bot started
+[AUDIO] loopback sink already exists: sipbot_sink
+[AUDIO] loopback monitor ready: sipbot_sink.monitor
+[AUDIO] default source set: sipbot_sink.monitor
+Baresip runtime started successfully
+Account created: 998@10.10.2.125
+CREATE
+UserAgent created
+REGISTERING
+[UA] REGISTERING
+REGISTER_FAIL | Протокол не поддерживается [93]
+[UA] REGISTER_FAIL | Протокол не поддерживается [93]
+Registration error: REGISTER could not be sent: Протокол не поддерживается
+[GUI] Bot already running
+[GUI] Bot already running
+[GUI] Bot already running
+[GUI] Bot already running
+
+❯ python3 -m video_bot.main
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:asyncio:Using selector: EpollSelector
+❯ python3 -m video_bot.main
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+INFO:baresip.runtime:runtime started
+DEBUG:baresip.native:ua: contact user 999
+DEBUG:baresip.native:ua: ua_register sip:999@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+INFO:baresip.runtime:runtime started
+DEBUG:baresip.native:ua: contact user 998
+DEBUG:baresip.native:ua: ua_register sip:998@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+❯ python3 -m video_bot.main
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+INFO:baresip.runtime:runtime started
+DEBUG:baresip.native:ua: contact user 998
+DEBUG:baresip.native:ua: ua_register sip:998@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+❯ source ./linenv/bin/activate
+❯ python3 -m video_bot.main
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+INFO:baresip.runtime:runtime started
+DEBUG:baresip.native:ua: contact user 998
+DEBUG:baresip.native:ua: ua_register sip:998@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+INFO:baresip.runtime:runtime started
+DEBUG:baresip.native:ua: contact user 998
+DEBUG:baresip.native:ua: ua_register sip:998@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+❯ python3 -m video_bot.main
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:baresip.native:Local network addresses:
+INFO:baresip.native:  None available for net_interface: br0
+INFO:baresip.native:aucodec: PCMU/8000/1
+INFO:baresip.native:aucodec: PCMA/8000/1
+INFO:baresip.native:libg722: using libg722 library
+INFO:baresip.native:aucodec: G722/16000/1
+DEBUG:baresip.native:opus: fmtp="stereo=1;sprop-stereo=1"
+INFO:baresip.native:aucodec: opus/48000/2
+INFO:baresip.native:vidcodec: VP8
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H264
+INFO:baresip.native:vidcodec: H265
+INFO:baresip.native:avcodec: using H.264 encoder 'libx264' -- libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.264 decoder 'h264' -- H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+INFO:baresip.native:avcodec: using H.265 encoder 'libx265' -- libx265 H.265 / HEVC
+INFO:baresip.native:avcodec: using H.265 decoder 'hevc' -- HEVC (High Efficiency Video Coding)
+INFO:baresip.native:mediaenc: srtp
+INFO:baresip.native:mediaenc: srtp-mand
+INFO:baresip.native:mediaenc: srtp-mandf
+INFO:baresip.native:dtls_srtp: use prime256v1 for elliptic curve cryptography
+INFO:baresip.native:mediaenc: dtls_srtp
+DEBUG:baresip.native:DTLS-SRTP ready with profiles SRTP_AES128_CM_SHA1_80:SRTP_AES128_CM_SHA1_32:SRTP_AEAD_AES_128_GCM:SRTP_AEAD_AES_256_GCM
+INFO:baresip.native:medianat: ice
+INFO:baresip.native:medianat: stun
+INFO:baresip.native:medianat: turn
+INFO:baresip.native:ausrc: aufile
+INFO:baresip.native:auplay: aufile
+INFO:baresip.native:ausrc: ausine
+INFO:baresip.native:aufilt: auconv
+INFO:baresip.native:aufilt: auresamp
+INFO:baresip.native:ausrc: alsa
+INFO:baresip.native:auplay: alsa
+INFO:baresip.native:vidsrc: v4l2
+INFO:baresip.native:ausrc: aumem
+INFO:baresip.native:auplay: aumem
+INFO:baresip.native:aufilt: aumem
+INFO:baresip.runtime:runtime started
+INFO:baresip.native:vidsrc: vidmem
+INFO:baresip.native:vidisp: vidmem
+INFO:baresip.native:vidfilt: vidmem
+DEBUG:baresip.native:ua: contact user 998
+DEBUG:baresip.native:ua: ua_register sip:998@10.10.2.125
+WARNING:baresip.native:ua: SIP register failed: Протокол не поддерживается [93]
+ERROR:baresip.ua:registration failed: REGISTER could not be sent: Протокол не поддерживается
+ERROR:asyncio:Future exception was never retrieved
+future: <Future finished exception=RegistrationError('registration failed: Протокол не поддерживается [93]')>
+baresip.errors.RegistrationError: registration failed: Протокол не поддерживается [93]
+INFO:baresip.native:ua: stop all (forced=1)
+DEBUG:baresip.native:module: unloading app rtcpsummary
+DEBUG:baresip.native:rtcpsummary: module closing..
+INFO:baresip.runtime:runtime closed
+
