@@ -9,6 +9,7 @@ import time
 import subprocess
 import threading
 import logging
+from pathlib import Path
 from evdev import UInput, ecodes
 from typing import Callable, Optional, List
 
@@ -181,9 +182,46 @@ class AudioManager:
         )
         return MediaPlayerProcess(process, path, self.sink_name)
 
+    def ensure_pipewire_sink_config(self) -> bool:
+        """Persist the null sink in pipewire-pulse config (survives reboots)."""
+        config_dir = Path.home() / ".config" / "pipewire" / "pipewire-pulse.conf.d"
+        config_path = config_dir / "99-sipbot-sink.conf"
+        sink_line = f"module-null-sink sink_name={self.sink_name}"
+        try:
+            if config_path.exists():
+                current = config_path.read_text(encoding="utf-8", errors="replace")
+                if sink_line in current:
+                    self.log(f"[AUDIO] pipewire sink config already present: {config_path}")
+                    return True
+                self.log(
+                    f"[AUDIO] pipewire sink config exists but does not declare "
+                    f"{self.sink_name}; leaving untouched: {config_path}"
+                )
+                return False
+
+            config_dir.mkdir(parents=True, exist_ok=True)
+            config_path.write_text(
+                "pulse.cmd = [\n"
+                "    {\n"
+                '        cmd = "load-module"\n'
+                f'        args = "{sink_line} '
+                f'sink_properties=device.description={self.sink_description}"\n'
+                "    }\n"
+                "]\n",
+                encoding="utf-8",
+            )
+            self.log(f"[AUDIO] pipewire sink config created: {config_path}")
+            return True
+        except Exception as e:
+            self.log(f"[AUDIO] pipewire sink config failed: {e}")
+            return False
+
     def ensure_loopback_sink(self) -> bool:
         if not self.auto_create_sink:
             return False
+
+        self.ensure_pipewire_sink_config()
+
         try:
             existing = subprocess.run(
                 ["pactl", "list", "short", "sinks"],
@@ -196,14 +234,22 @@ class AudioManager:
             self.log(f"[AUDIO] pactl list sinks failed: {e}")
             return False
 
-        if existing.returncode == 0 and any(
-            len(line.split()) > 1 and line.split()[1] == self.sink_name
-            for line in existing.stdout.splitlines()
-        ):
-            self.log(f"[AUDIO] loopback sink already exists: {self.sink_name}")
-            if not self._wait_loopback_sink_ready(self.sink_name):
-                return False
-            return self._set_default_source(self.sink_name)
+        if existing.returncode == 0:
+            matches = [
+                line for line in existing.stdout.splitlines()
+                if len(line.split()) > 1 and line.split()[1] == self.sink_name
+            ]
+            if matches:
+                if len(matches) > 1:
+                    self.log(
+                        f"[AUDIO] duplicate sinks named {self.sink_name} detected "
+                        f"({len(matches)}); using existing, not creating another"
+                    )
+                else:
+                    self.log(f"[AUDIO] loopback sink already exists: {self.sink_name}")
+                if not self._wait_loopback_sink_ready(self.sink_name):
+                    return False
+                return self._set_default_source(self.sink_name)
 
         try:
             created = subprocess.run(

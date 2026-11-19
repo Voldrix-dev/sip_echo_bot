@@ -2,6 +2,8 @@
 
 Linux desktop application (PySide6 + baresip) that answers SIP calls and echoes received video/audio back, with a GUI for configuration and call monitoring.
 
+![SIP Echo Bot](docs/screenshot.png)
+
 ## Features
 - Answers incoming SIP calls with video
 - Echoes received video frames back to caller
